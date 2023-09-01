@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Music Player Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            max-width: 800px; /* Adjust the width as per your preference */
+            margin: 0 auto; /* Center the box horizontally on the page */
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin: 10px 0;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .image {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .code-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .code-link {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Arduino Music Player Project Documentation</h1>
+
+    <div class="section">
+        <h2>Introduction:</h2>
+        <p>The Arduino Music Player project is an enjoyable DIY project that allows you to create your own music player using Arduino. You can build a music player that can play ".wav" audio files. This project involves using an Arduino Nano, an SD card module, speakers, and a few basic tools. The Arduino code for this project utilizes the "TMRpcm" library to play audio files stored on a microSD card. This documentation will guide you systematically through the project.</p>
+        <!-- Insert Image Here -->
+        <img src="images\image1.jpg" alt="Arduino Music Player" class="image">
+    </div>
+
+    <div class="section">
+        <h2>Materials & Supplies:</h2>
+        <p><strong>Parts List:</strong></p>
+        <ul>
+            <li>Arduino Nano</li>
+            <li>SD Card Module</li>
+            <li>Speakers</li>
+        </ul>
+        <p><strong>Tools:</strong></p>
+        <ul>
+            <li>Soldering Iron</li>
+            <li>Solder Wire</li>
+            <li>Helping Hands</li>
+        </ul>
+        <p><strong>Arduino Library:</strong> Install the "TMRpcm" library in the Arduino IDE by going to Tools &gt; Manage Libraries and searching for "TMRpcm."</p>
+    </div>
+
+    <div class="section">
+        <h2>Schematic & Code:</h2>
+        <!-- Insert Image Here -->
+        <img src="images\image2.jpg" alt="Schematic and Code" class="image">
+        <p>Download the source code from <a href="https://nematicslab.com/wp-content/uploads/2020/11/Music_Player_Arduino_Code.zip" class="code-link">this link</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Implementation:</h2>
+
+        <h3>1. Soldering Components:</h3>
+        <p>
+            • Solder all the components as shown in the circuit diagram.<br>
+            • The SD card module interfaces with the Arduino using the SPI protocol.
+        </p>
+        <!-- Insert Image Here -->
+        <img src="images\image3.jpg" alt="Soldering Components" class="image">
+
+        <h3>2. Arduino Processing:</h3>
+        <p>
+            • The Arduino reads information from the SD card and generates audio signals.<br>
+            • These signals are then outputted through the speaker, which is connected to digital pin 9 on the Arduino Nano or Uno.<br>
+            • For Arduino Mega, use digital pins 5, 6, 11, or 46.
+        </p>
+
+        <h3>3. Converting Music Files:</h3>
+        <!-- Insert Image 1 Here -->
+        <img src="images\image4.jpg" alt="Converting Music Files 1" class="image">
+        <p>
+            • To ensure compatibility with Arduino, convert your music files to the following specifications:<br>
+            • Samples Per Second (Hz): 16000<br>
+            • Channel: Mono<br>
+            • Bits Per Sample: 8<br>
+            • PCM Format: PCM unsigned 8-bit<br>
+            • Use the website <a href="https://audio.online-convert.com/" target="_blank">audio.online-convert.com</a> to convert your music files.<br>
+            • After conversion, rename the songs as song1, song2, song3, etc.
+        </p>
+        <!-- Insert Image 2 Here -->
+        <img src="images\image5.jpg" alt="Converting Music Files 2" class="image">
+        <!-- Insert Image 3 Here -->
+        <img src="images\image6.jpg" alt="Converting Music Files 3" class="image">
+
+        <h3>4. Prepare the microSD Card:</h3>
+        <p>
+            • Format the microSD card as FAT using formatting software like "SD Memory Card Formatter."<br>
+            • Copy all the converted WAV audio files to the microSD card.
+        </p>
+
+        <h3>5. Usage:</h3>
+        <p>
+            • Upon resetting the Arduino, the first song (song1.wav) will play automatically.<br>
+            • Utilize the following buttons for control:<br>
+            • Play / Pause Button: Play or pause the current track<br>
+            • Next Button: Play the next track.<br>
+            • Prev Button: Play the previous track.
+        </p>
+    </div>
+    <div class="section">
+        <h2>Contact Information:</h2>
+        <p><strong>All Rights Reserved &copy; 2023 by Anuj Jaiswal</strong></p>
+        <p>If you have any questions or need further assistance, please feel free to <a href="mailto:anuj2804j@gmail.com"><strong>contact me</strong></a>:</p>
+        <p><strong>Email:</strong> <a href="mailto:anuj2804j@gmail.com">anuj2804j@gmail.com</a></p>
+    </div>
+    
+    
+</body>
+</html>
